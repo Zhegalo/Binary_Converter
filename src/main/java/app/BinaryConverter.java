@@ -11,11 +11,15 @@ public class BinaryConverter {
 
 
     public static void main(String[] args) {
-        String i = new BinaryConverter().binaryConverter(3);
+        String i = new BinaryConverter().converter(3);
         System.out.println(i);
     }
 
-    public String binaryConverter(int number) {
+    public String converter(int number) {
+
         return ("Binary is " + Integer.toBinaryString(number));
     }
+
+
+
 }

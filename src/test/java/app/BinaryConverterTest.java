@@ -1,12 +1,19 @@
+package app;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class BinaryConverterTest {
 
     @DataProvider(name = "numbers")
     public Object[][] numbers() {
         return new Object[][]{
-                {3}
+                {3, "11"}
         };
     }
+
 
     @Test(dataProvider = "numbers")
     public void correctConversionTest(int number, String expected) {
@@ -14,10 +21,14 @@ public class BinaryConverterTest {
         BinaryConverter app = new BinaryConverter();
 
         // when
-        String result = app.stringConverter();
+        String result = app.converter(number);
 
         // then
         assertEquals(result, expected);
     }
-}
+  }
+
+
+
+
 

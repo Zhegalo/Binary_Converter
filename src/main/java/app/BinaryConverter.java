@@ -1,3 +1,5 @@
+package app;
+
 /**
  * Created by Hanna_Zhahala on 13.02.2017.
  */
@@ -12,12 +14,12 @@ public class BinaryConverter {
 
     public static void main(String[] args) {
         String i = new BinaryConverter().converter(3);
-        System.out.println(i);
+        System.out.println("Binary is " + i);
     }
 
     public String converter(int number) {
 
-        return ("Binary is " + Integer.toBinaryString(number));
+        return Integer.toBinaryString(number);
     }
 
 
